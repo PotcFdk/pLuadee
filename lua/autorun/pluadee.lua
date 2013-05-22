@@ -4,6 +4,8 @@
 		 Work in Progress !         
 ********************************]]--
 
+--[[ VERSION 1.0 ]]--
+
 
 --[[===========================================================================
     This file is part of pLuadee by PotcFdk.
@@ -356,8 +358,8 @@ if CLIENT then
 
 	pLuadee.channels = {}
 	
-	function pLuadee:GetRevision()	
-		return revision
+	function pLuadee:About()	
+		LocalPlayer():ChatPrint("pLuadee v1.0   by PotcFdk")
 	end
 	
 	-- Checks
