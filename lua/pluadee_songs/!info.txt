@@ -1,0 +1,16 @@
+This directory contains the pLuadee Songs.
+They have been converted with a self-made C++ parser.
+
+Songs:
+
+ - ziphoid-megamix88.pld.lua
+   :-> Ziphoid - Megamix '88
+   
+ - horizon.pld.lua
+   :-> Estrayk - Horizon
+   
+ - theme_of_cia.pld.lua
+   :-> ( Unknown Artist ) - Theme Of CIA
+   
+ - potcfdk-brakestorm.pld.lua
+   :-> PotcFdk - Brakestorm     (uses samples from  'ziphoid - megamix88' )
