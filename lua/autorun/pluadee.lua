@@ -28,6 +28,7 @@
 -- Send HUD to the client
 
 if SERVER then
+	CreateConVar("pf_sv_pluadee", "1", {FCVAR_NOTIFY})
 	AddCSLuaFile("pluadee/pluadee-hud.lua")
 end
 
