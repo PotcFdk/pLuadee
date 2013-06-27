@@ -56,9 +56,6 @@ end
 	
 local TAG = "pLuadee_net"
 
-local rev_str = "$Revision: 5651 $"
-local revision = tonumber(string.sub(rev_str,12,-3))
-
 
 ----------------------------------
 -- Helpers
@@ -145,10 +142,6 @@ if SERVER then
 	end
 	
 	pLuadee = {}
-	
-	function pLuadee:GetRevision()	
-		return revision
-	end
 	
 	function pLuadee:BroadcastSong(data)
 		assert(istable(data), "Parameter 1 must be songdata!")
