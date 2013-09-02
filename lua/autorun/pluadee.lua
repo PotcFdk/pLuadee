@@ -339,6 +339,7 @@ if CLIENT then
 	pLuadee = {}
 	pLuadeeSongs = pLuadeeSongs or {}
 
+	pLuadee.begin = 0
 	pLuadee.last = 0
 	pLuadee.pos = 1
 	pLuadee.tick = 0.1
@@ -559,7 +560,7 @@ if CLIENT then
 	end
 	
 	function pLuadee:GetPos()
-		return math.floor((SysTime() - self.begin) /self.tick)
+		return math.floor((SysTime() - self.begin) / self.tick)
 	end
 	
 	-- Sound Tick
