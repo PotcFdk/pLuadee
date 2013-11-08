@@ -590,7 +590,9 @@ if CLIENT then
 				end
 			end
 			
-			hook.Run("pLuadee-Tick", true, self.song.meta.author, self.song.meta.title, self.song.meta.tick, self.pos, #self.song[1])
+			local distance = self.ent:GetPos():Distance(LocalPlayer():GetPos())
+			
+			hook.Run("pLuadee-Tick", true, self.song.meta.author, self.song.meta.title, self.song.meta.tick, self.pos, #self.song[1], distance)
 			
 			self.last = self.pos
 			

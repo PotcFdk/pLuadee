@@ -42,6 +42,7 @@ pLuadeeHud.songname = nil
 pLuadeeHud.tickrate = 0
 pLuadeeHud.position = 0
 pLuadeeHud.length = 0
+pLuadeeHud.distance = 0
 
 
 local width = 270
@@ -71,6 +72,8 @@ lin.yalign = TEXT_ALIGN_CENTER -- Vertical Alignment
 
 hook.Add("HUDPaint", "pLuadee-HUD", function()
 	if not pLuadeeHud.onoff then return end
+		
+	surface.SetAlphaMultiplier(math.Clamp((2000 - pLuadeeHud.distance + 500) / 2000, 0, 1))
 		
 	lin.xalign = TEXT_ALIGN_RIGHT -- Horizontal Alignment
 	
@@ -145,11 +148,12 @@ hook.Add("HUDPaint", "pLuadee-HUD", function()
 end)
 
 
-hook.Add("pLuadee-Tick", "pLuadee-HUD", function(onoff, artist, songname, tickrate, position, length)
+hook.Add("pLuadee-Tick", "pLuadee-HUD", function(onoff, artist, songname, tickrate, position, length, distance)
 	pLuadeeHud.onoff = onoff
 	pLuadeeHud.artist = artist
 	pLuadeeHud.songname = songname
 	pLuadeeHud.tickrate = tickrate
 	pLuadeeHud.position = position
 	pLuadeeHud.length = length
+	pLuadeeHud.distance = distance
 end)
